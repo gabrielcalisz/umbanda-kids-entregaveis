@@ -1,8 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    { "src": "/pro", "dest": "/entrega.html" },
-    { "src": "/basico", "dest": "/basico/index.html" }
-  ]
+  "trailingSlash": false
 }

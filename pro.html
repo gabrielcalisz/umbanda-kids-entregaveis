@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '973952325383470');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=973952325383470&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <title>Umbanda Kids – Seu Pedido Está Liberado!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #f0c040;
+      --gold-dark: #c8960a;
+      --white: #ffffff;
+      --shadow: 0 2px 12px rgba(0,0,0,0.85);
+      --card-bg: rgba(20, 8, 40, 0.78);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      color: var(--white);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ── Background ── */
+    #bg {
+      position: fixed;
+      inset: 0;
+      background: url('https://i.imgur.com/4NqFXf9.jpg') center/cover no-repeat;
+      filter: blur(5px) brightness(0.55);
+      transform: scale(1.05);
+      z-index: -1;
+    }
+
+    /* ── Wrapper ── */
+    .page { max-width: 860px; margin: 0 auto; padding: 40px 20px 60px; }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      padding: 38px 24px 32px;
+      background: rgba(10,4,28,0.72);
+      border-radius: 18px;
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 40px rgba(240,192,64,0.25), var(--shadow);
+      margin-bottom: 36px;
+    }
+
+    header .badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a0a00;
+      font-weight: 900;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 18px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.15rem, 4vw, 1.7rem);
+      line-height: 1.4;
+      color: var(--gold);
+      text-shadow: 0 2px 14px rgba(0,0,0,0.9), 0 0 30px rgba(240,192,64,0.35);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* ── Section title ── */
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1rem, 3.5vw, 1.35rem);
+      color: var(--gold);
+      text-shadow: var(--shadow);
+      text-align: center;
+      margin-bottom: 22px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Downloads section ── */
+    .downloads-box {
+      background: var(--card-bg);
+      border: 1.5px solid rgba(240,192,64,0.4);
+      border-radius: 16px;
+      padding: 30px 28px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .download-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 16px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(240,192,64,0.18);
+      text-decoration: none;
+      color: var(--white);
+      transition: background 0.22s, transform 0.18s;
+    }
+
+    .download-item:last-child { margin-bottom: 0; }
+
+    .download-item:hover {
+      background: rgba(240,192,64,0.15);
+      transform: translateX(4px);
+    }
+
+    .download-item .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.3rem;
+    }
+
+    .download-item .info { flex: 1; }
+    .download-item .info strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+    }
+    .download-item .info span {
+      font-size: 0.78rem;
+      opacity: 0.7;
+    }
+
+    .download-item .btn-dl {
+      background: var(--gold);
+      color: #1a0a00;
+      font-weight: 900;
+      font-size: 0.72rem;
+      padding: 7px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ── Upsell section ── */
+    .upsell-banner {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(200,150,10,0.25), rgba(240,192,64,0.12));
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      padding: 18px 24px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 24px rgba(240,192,64,0.2);
+    }
+
+    .upsell-banner p {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.9rem, 3vw, 1.2rem);
+      font-weight: 700;
+      color: var(--gold);
+      text-shadow: var(--shadow);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Product grid ── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 22px;
+      margin-bottom: 40px;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border: 1.5px solid rgba(240,192,64,0.3);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.22s, box-shadow 0.22s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 32px rgba(240,192,64,0.25), var(--shadow);
+    }
+
+    .product-card .thumb {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      background: #1a0a30;
+    }
+
+    .product-card .thumb-video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: #1a0a30;
+      overflow: hidden;
+    }
+    .product-card .thumb-video img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .product-card .thumb-video .play-icon {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.35);
+      font-size: 3rem;
+      color: var(--gold);
+      text-shadow: 0 0 20px rgba(0,0,0,0.7);
+      transition: background 0.2s;
+    }
+    .product-card .thumb-video:hover .play-icon { background: rgba(0,0,0,0.5); }
+
+    .product-card .card-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card .card-body h3 {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--white);
+      text-shadow: 0 1px 8px rgba(0,0,0,0.8);
+      margin-bottom: 10px;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .product-card .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .product-card .price {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: var(--gold);
+      text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+    }
+
+    .btn-buy {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: #1a0a00;
+      font-weight: 900;
+      font-size: 0.78rem;
+      padding: 9px 18px;
+      border-radius: 22px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+      transition: filter 0.2s, transform 0.18s;
+      box-shadow: 0 2px 10px rgba(200,150,10,0.4);
+    }
+
+    .btn-buy:hover { filter: brightness(1.12); transform: scale(1.04); }
+
+    /* ── Platform card (wide) ── */
+    .platform-card {
+      background: var(--card-bg);
+      border: 2px solid var(--gold);
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 0 30px rgba(240,192,64,0.15), var(--shadow);
+    }
+
+    .platform-card .platform-video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #0d0520;
+      cursor: pointer;
+    }
+    .platform-card .platform-video img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .platform-card .platform-video .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.4);
+      gap: 10px;
+    }
+    .platform-card .platform-video .play-circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #1a0a00;
+      box-shadow: 0 0 20px rgba(240,192,64,0.5);
+      transition: transform 0.2s;
+    }
+    .platform-card .platform-video:hover .play-circle { transform: scale(1.1); }
+    .platform-card .platform-video .play-label {
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--white);
+      text-shadow: var(--shadow);
+      letter-spacing: 1px;
+    }
+
+    .platform-card .platform-body {
+      padding: 24px 26px;
+    }
+    .platform-card .platform-body h3 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.95rem, 3vw, 1.2rem);
+      color: var(--gold);
+      text-shadow: var(--shadow);
+      margin-bottom: 12px;
+    }
+    .platform-card .platform-body p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      opacity: 0.88;
+      margin-bottom: 18px;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    }
+    .platform-card .platform-footer {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .platform-card .platform-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+    }
+    .platform-card .platform-cta { flex: 1; min-width: 180px; }
+    .platform-card .platform-cta .price-tag {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--gold);
+      text-shadow: var(--shadow);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* ── Instagram section ── */
+    .instagram-section {
+      text-align: center;
+      background: var(--card-bg);
+      border: 1.5px solid rgba(240,192,64,0.3);
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+    .instagram-section img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      border: 2px solid rgba(240,192,64,0.3);
+    }
+    .instagram-section p {
+      font-size: 1rem;
+      font-weight: 700;
+      text-shadow: var(--shadow);
+      margin-bottom: 16px;
+    }
+    .btn-instagram {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.88rem;
+      padding: 12px 28px;
+      border-radius: 28px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 16px rgba(131,58,180,0.4);
+      transition: filter 0.2s, transform 0.18s;
+    }
+    .btn-instagram:hover { filter: brightness(1.1); transform: scale(1.04); }
+
+    /* ── Modal ── */
+    #modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 1, 15, 0.82);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s;
+    }
+    #modal-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    #modal {
+      background: linear-gradient(155deg, #1a0a38, #0d0520);
+      border: 2px solid var(--gold);
+      border-radius: 22px;
+      max-width: 460px;
+      width: 100%;
+      padding: 36px 30px 30px;
+      text-align: center;
+      box-shadow: 0 0 60px rgba(240,192,64,0.2), 0 20px 60px rgba(0,0,0,0.7);
+      position: relative;
+      transform: translateY(30px);
+      transition: transform 0.4s;
+    }
+    #modal-overlay.show #modal { transform: translateY(0); }
+
+    #modal .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.5);
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    #modal .modal-close:hover { color: var(--white); }
+
+    #modal .modal-icon { font-size: 3.2rem; margin-bottom: 8px; }
+    #modal h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      color: var(--gold);
+      text-shadow: var(--shadow);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    #modal p {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    }
+    .modal-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .modal-btns .btn-primary {
+      display: block;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: #1a0a00;
+      font-weight: 900;
+      font-size: 0.92rem;
+      padding: 14px 24px;
+      border-radius: 28px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      box-shadow: 0 4px 18px rgba(200,150,10,0.4);
+      transition: filter 0.2s, transform 0.18s;
+      cursor: pointer;
+      border: none;
+    }
+    .modal-btns .btn-primary:hover { filter: brightness(1.1); transform: scale(1.02); }
+    .modal-btns .btn-secondary {
+      display: block;
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.75);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 12px 24px;
+      border-radius: 28px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .modal-btns .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      .products-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .product-card .card-footer { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 360px) {
+      .products-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background -->
+  <div id="bg"></div>
+
+  <!-- Modal overlay -->
+  <div id="modal-overlay">
+    <div id="modal">
+      <button class="modal-close" onclick="closeModal()" aria-label="Fechar">&#x2715;</button>
+      <div class="modal-icon">&#x1F31F;</div>
+      <h2>Produtos Especiais para você!</h2>
+      <p>Temos mais materiais incríveis de Umbanda Kids aguardando você. Confira nossa loja e aproveite descontos exclusivos para clientes!</p>
+      <div class="modal-btns">
+        <a href="#upsell" class="btn-primary" onclick="closeModal()">Ver Loja</a>
+        <a href="#downloads" class="btn-secondary" onclick="closeModal()">Acessar meu Produto</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- Header -->
+    <header>
+      <div class="badge">&#x2728; Pedido Liberado &#x2728;</div>
+      <h1>PARABÉNS PELA INICIATIVA DE COMPARTILHAR O AXÉ COM SUAS CRIANÇAS, SEU PEDIDO ESTÁ LIBERADO!</h1>
+    </header>
+
+    <!-- Downloads -->
+    <section id="downloads">
+      <p class="section-title">&#x1F4E5; Acesse seus materiais abaixo</p>
+      <div class="downloads-box">
+
+        <a class="download-item" href="https://drive.google.com/drive/folders/1vVNFgSIbv0jMz3QP8v_GhvQDseIlYAMn?usp=drive_link" target="_blank" rel="noopener">
+          <span class="icon">&#x1F3A8;</span>
+          <span class="info">
+            <strong>150 Desenhos para Imprimir e Colorir</strong>
+            <span>Google Drive · Pasta de arquivos</span>
+          </span>
+          <span class="btn-dl">Acessar</span>
+        </a>
+
+        <a class="download-item" href="https://drive.google.com/file/d/1fZza-EB5izGKwc4SGhjWsh_JJTJ6-ihw/view?usp=drive_link" target="_blank" rel="noopener">
+          <span class="icon">&#x1F3AE;</span>
+          <span class="info">
+            <strong>18 Joguinhos Interativos de Umbanda</strong>
+            <span>Google Drive · Arquivo</span>
+          </span>
+          <span class="btn-dl">Acessar</span>
+        </a>
+
+        <a class="download-item" href="https://drive.google.com/drive/folders/16Z-ZsIjbwLOuHPwQciR2ynKpZdshQWDh?usp=drive_link" target="_blank" rel="noopener">
+          <span class="icon">&#x1F3AD;</span>
+          <span class="info">
+            <strong>Máscaras de Orixás</strong>
+            <span>Google Drive · Pasta de arquivos</span>
+          </span>
+          <span class="btn-dl">Acessar</span>
+        </a>
+
+        <a class="download-item" href="https://drive.google.com/drive/folders/1WC5G1iIeNwFRv20-N2qybTUF5LvabGQR?usp=drive_link" target="_blank" rel="noopener">
+          <span class="icon">&#x2702;&#xFE0F;</span>
+          <span class="info">
+            <strong>Moldes Sem Cor</strong>
+            <span>Google Drive · Pasta de arquivos</span>
+          </span>
+          <span class="btn-dl">Acessar</span>
+        </a>
+
+        <a class="download-item" href="https://drive.google.com/drive/folders/1bt90MyRQ1kUl4dUNI6W3sx7wYg67BdPl?usp=drive_link" target="_blank" rel="noopener">
+          <span class="icon">&#x1F58C;&#xFE0F;</span>
+          <span class="info">
+            <strong>Moldes Já Coloridos</strong>
+            <span>Google Drive · Pasta de arquivos</span>
+          </span>
+          <span class="btn-dl">Acessar</span>
+        </a>
+
+        <a class="download-item" href="https://drive.google.com/file/d/11_vNpn3wWuHcaZmF6VXZJoObdMJFk41B/view?usp=drive_link" target="_blank" rel="noopener">
+          <span class="icon">&#x1F4C5;</span>
+          <span class="info">
+            <strong>Calendário da Umbanda 2026</strong>
+            <span>Google Drive · Arquivo</span>
+          </span>
+          <span class="btn-dl">Acessar</span>
+        </a>
+
+        <a class="download-item" href="https://drive.google.com/file/d/1zq7CGuoDKjKjJFcal6ooAd-8o_4ctUTK/view?usp=drive_link" target="_blank" rel="noopener">
+          <span class="icon">&#x1F3C5;</span>
+          <span class="info">
+            <strong>Certificado</strong>
+            <span>Google Drive · Arquivo</span>
+          </span>
+          <span class="btn-dl">Acessar</span>
+        </a>
+
+        <a class="download-item" href="https://drive.google.com/file/d/1B-Fv1VqOE02HHuf6sF46h5Y-yMU6U3iR/view?usp=drive_link" target="_blank" rel="noopener">
+          <span class="icon">&#x1F4D6;</span>
+          <span class="info">
+            <strong>Cartilha de Pontos</strong>
+            <span>Google Drive · Arquivo</span>
+          </span>
+          <span class="btn-dl">Acessar</span>
+        </a>
+
+        <a class="download-item" href="https://drive.google.com/file/d/1T7q5-rllRtNXhtkaEuQ2EijcsSMsbd2H/view?usp=drive_link" target="_blank" rel="noopener">
+          <span class="icon">&#x1F0CF;</span>
+          <span class="info">
+            <strong>Flash Cards</strong>
+            <span>Google Drive · Arquivo</span>
+          </span>
+          <span class="btn-dl">Acessar</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Upsell section -->
+    <section id="upsell">
+      <div class="upsell-banner">
+        <p>&#x1F4B0; POR SER CLIENTE, VOCÊ RECEBE DESCONTOS ESPECIAIS EM NOSSOS PRODUTOS! &#x1F4B0;</p>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- Atualizações -->
+        <div class="product-card">
+          <img class="thumb" src="https://i.imgur.com/7kgxOIi.jpg" alt="Atualizações Plataforma" loading="lazy" />
+          <div class="card-body">
+            <h3>Atualizações Sempre Que Novos Materiais de Estudo Forem Adicionados à Plataforma</h3>
+            <div class="card-footer">
+              <span class="price">R$ 4,90</span>
+              <a class="btn-buy" href="https://pay.lowify.com.br/checkout?product_id=0pK4aE" target="_blank" rel="noopener">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 50 Vídeos -->
+        <div class="product-card">
+          <img class="thumb" src="https://i.imgur.com/vWXjLhj.jpg" alt="50 Vídeos Musicais Animados" loading="lazy" />
+          <div class="card-body">
+            <h3>50 Vídeos Musicais Animados de Umbanda</h3>
+            <div class="card-footer">
+              <span class="price">R$ 4,90</span>
+              <a class="btn-buy" href="https://pay.lowify.com.br/checkout?product_id=0pK4aE" target="_blank" rel="noopener">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 30 Orações -->
+        <div class="product-card">
+          <img class="thumb" src="https://i.imgur.com/yL1iUhl.jpg" alt="+30 Orações de Umbanda Infantil" loading="lazy" />
+          <div class="card-body">
+            <h3>+30 Orações de Umbanda Infantil</h3>
+            <div class="card-footer">
+              <span class="price">R$ 4,90</span>
+              <a class="btn-buy" href="https://pay.lowify.com.br/checkout?product_id=4h675G" target="_blank" rel="noopener">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guia Umbanda Kids -->
+        <div class="product-card">
+          <img class="thumb" src="https://i.imgur.com/VyM6lTl.jpg" alt="Guia Umbanda Kids" loading="lazy" />
+          <div class="card-body">
+            <h3>Guia Umbanda Kids</h3>
+            <div class="card-footer">
+              <span class="price">R$ 4,90</span>
+              <a class="btn-buy" href="https://pay.lowify.com.br/checkout?product_id=ZF1Wsk" target="_blank" rel="noopener">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banho de Prosperidade -->
+        <div class="product-card">
+          <img class="thumb" src="https://i.imgur.com/mWPEBgg.jpg" alt="Aula Banho de Prosperidade" loading="lazy" />
+          <div class="card-body">
+            <h3>Aula Banho de Prosperidade</h3>
+            <div class="card-footer">
+              <span class="price">R$ 4,90</span>
+              <a class="btn-buy" href="https://pay.lowify.com.br/checkout?product_id=kzEHrA" target="_blank" rel="noopener">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Plataforma card -->
+      <div class="platform-card">
+        <div class="platform-video">
+          <img src="https://i.imgur.com/UkFIkz5.jpg" alt="Vídeo da Plataforma" />
+          <div class="play-overlay">
+            <div class="play-circle">&#x25B6;</div>
+            <span class="play-label">&#x25B6; ASSISTIR VÍDEO</span>
+          </div>
+        </div>
+        <div class="platform-body">
+          <h3>Plataforma Umbanda Para Todos</h3>
+          <p>Cursos, Oferendas, Fundamentos, Banhos e tudo que você precisará durante sua caminhada espiritual — agora na palma da sua mão.</p>
+          <div class="platform-footer">
+            <img class="platform-photo" src="https://i.imgur.com/ILKDqAY.jpg" alt="Plataforma" />
+            <div class="platform-cta">
+              <span class="price-tag">R$ 14,90</span>
+              <a class="btn-buy" href="https://pay.lowify.com.br/checkout?product_id=0pK4aE" target="_blank" rel="noopener">Quero Acessar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Instagram -->
+    <section class="instagram-section">
+      <img src="https://i.imgur.com/ktqczAF.jpg" alt="Umbanda Para Todos no Instagram" loading="lazy" />
+      <p>&#x1F4F8; Nos siga no Instagram e fique por dentro de todos os novos conteúdos!</p>
+      <a class="btn-instagram" href="https://instagram.com/umbandaparatodosoficial" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="white"/></svg>
+        @umbandaparatodosoficial
+      </a>
+    </section>
+
+  </div>
+
+  <script>
+    // Modal after 3 seconds
+    function closeModal() {
+      var overlay = document.getElementById('modal-overlay');
+      overlay.classList.remove('show');
+    }
+
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.getElementById('modal-overlay').classList.add('show');
+      }, 3000);
+    });
+
+    // Close modal when clicking outside
+    document.getElementById('modal-overlay').addEventListener('click', function (e) {
+      if (e.target === this) closeModal();
+    });
+  </script>
+</body>
+</html>
