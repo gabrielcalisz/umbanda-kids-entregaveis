@@ -3,6 +3,6 @@
   "trailingSlash": false,
   "routes": [
     { "src": "/pro", "dest": "/entrega.html" },
-    { "src": "/basico", "dest": "/basico/entrega-basico.html" }
+    { "src": "/basico", "dest": "/basico/index.html" }
   ]
 }
