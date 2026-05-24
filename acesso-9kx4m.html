@@ -313,7 +313,9 @@
     .platform-card .platform-video {
       position: relative;
       width: 100%;
-      aspect-ratio: 16/9;
+      max-width: 360px;
+      margin: 0 auto;
+      aspect-ratio: 3/4;
       background: #0d0520;
       cursor: pointer;
     }
@@ -483,6 +485,23 @@
     }
     #modal .modal-close:hover { color: var(--white); }
 
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .modal-grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1.5px solid rgba(240,192,64,0.3);
+    }
+    .modal-grid img:first-child {
+      grid-column: span 2;
+      aspect-ratio: 16/7;
+    }
     #modal .modal-icon { font-size: 3.2rem; margin-bottom: 8px; }
     #modal h2 {
       font-family: 'Cinzel', serif;
@@ -558,11 +577,16 @@
   <div id="modal-overlay">
     <div id="modal">
       <button class="modal-close" onclick="closeModal()" aria-label="Fechar">&#x2715;</button>
-      <div class="modal-icon">&#x1F31F;</div>
-      <h2>Produtos Especiais para você!</h2>
-      <p>Temos mais materiais incríveis de Umbanda Kids aguardando você. Confira nossa loja e aproveite descontos exclusivos para clientes!</p>
+      <div class="modal-grid">
+        <img src="https://i.imgur.com/VyM6lTl.jpg" alt="Guia Umbanda Kids" />
+        <img src="https://i.imgur.com/vWXjLhj.jpg" alt="50 Vídeos" />
+        <img src="https://i.imgur.com/yL1iUhl.jpg" alt="Orações" />
+        <img src="https://i.imgur.com/mWPEBgg.jpg" alt="Banho Prosperidade" />
+      </div>
+      <h2>&#x1F4B0; Descontos exclusivos para clientes!</h2>
+      <p>Aproveite ofertas especiais em mais materiais de Umbanda Kids disponíveis para você.</p>
       <div class="modal-btns">
-        <a href="#upsell" class="btn-primary" onclick="closeModal()">Ver Loja</a>
+        <a href="#upsell" class="btn-primary" onclick="closeModal()">Ver Ofertas</a>
         <a href="#downloads" class="btn-secondary" onclick="closeModal()">Acessar meu Produto</a>
       </div>
     </div>
