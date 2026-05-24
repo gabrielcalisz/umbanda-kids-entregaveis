@@ -1,0 +1,725 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '973952325383470');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=973952325383470&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+<title>Cartilha de Pontos Cantados Infantis – Filhos do Axé PRO</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+  @page { size: A4 portrait; margin: 10mm; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Lato', sans-serif; background: #fff; color: #1c1c1c; }
+
+  /* ── COVER ── */
+  .cover {
+    min-height: 277mm;
+    background: linear-gradient(160deg, #0b2818 0%, #1a4a2e 50%, #0b2818 100%);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 15mm;
+    page-break-after: always;
+    position: relative; overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 40%, rgba(212,160,23,0.2) 0%, transparent 60%);
+  }
+  .cover-border { position: absolute; inset: 8mm; border: 2px solid rgba(212,160,23,0.45); border-radius:4mm; }
+  .cover-content { position: relative; z-index: 2; }
+  .cover-tag {
+    display: inline-block;
+    background: linear-gradient(135deg,#d4a017,#a07810);
+    color: #fff; font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 8pt;
+    padding: 4px 16px; border-radius: 20px;
+    letter-spacing: 2px; margin-bottom: 6mm;
+  }
+  .cover-notes { font-size: 40pt; margin-bottom: 4mm; }
+  .cover h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; font-size: 22pt;
+    color: #f5c842; line-height: 1.2; margin-bottom: 3mm;
+  }
+  .cover h2 { font-family:'Montserrat',sans-serif; font-weight:600; font-size:11pt; color:rgba(255,255,255,0.6); margin-bottom:6mm; }
+  .divider { width:40mm; height:2px; background:linear-gradient(90deg,transparent,#d4a017,transparent); margin:4mm auto; }
+  .cover-desc { font-size:9.5pt; color:rgba(255,255,255,0.65); line-height:1.8; max-width:130mm; margin:0 auto 6mm; }
+  .cover-songs {
+    display: grid; grid-template-columns: repeat(2,1fr); gap:3mm;
+    max-width: 120mm; margin: 0 auto;
+  }
+  .cover-song-item {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(212,160,23,0.25);
+    border-radius: 3mm; padding: 2.5mm 4mm;
+    display: flex; align-items: center; gap: 2.5mm;
+    font-size: 8pt; color: rgba(255,255,255,0.8);
+    font-family: 'Montserrat', sans-serif; font-weight: 600;
+  }
+  .cover-axe { margin-top:6mm; font-family:'Montserrat',sans-serif; font-size:9pt; color:rgba(212,160,23,0.5); letter-spacing:3px; }
+
+  /* ── INTRO PAGE ── */
+  .intro-page {
+    padding: 6mm 0;
+    page-break-after: always;
+  }
+  .intro-box {
+    background: linear-gradient(135deg,#1a4a2e,#2d7a4f);
+    border-radius: 4mm; padding: 6mm; margin-bottom: 6mm;
+    color: #fff;
+  }
+  .intro-box h2 {
+    font-family: 'Montserrat', sans-serif; font-weight: 900;
+    font-size: 11pt; color: #f5c842; margin-bottom: 3mm;
+  }
+  .intro-box p { font-size: 9pt; line-height: 1.7; color: rgba(255,255,255,0.8); }
+  .uso-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 3mm; }
+  .uso-card {
+    background: #fffbf0; border: 1.5px solid rgba(212,160,23,0.3);
+    border-radius: 3mm; padding: 4mm;
+  }
+  .uso-card h3 {
+    font-family: 'Montserrat', sans-serif; font-weight: 800;
+    font-size: 8.5pt; color: #1a4a2e; margin-bottom: 2mm;
+    display: flex; align-items: center; gap: 2mm;
+  }
+  .uso-card p { font-size: 7.5pt; color: #555; line-height: 1.5; }
+
+  /* ── SONG PAGE ── */
+  .song-page {
+    page-break-before: always;
+    padding: 3mm 0;
+  }
+  .song-header {
+    border-radius: 3mm; padding: 4mm 6mm; margin-bottom: 4mm;
+    display: flex; align-items: center; gap: 4mm;
+  }
+  .song-icon { font-size: 22pt; flex-shrink: 0; }
+  .song-title-block h2 {
+    font-family: 'Montserrat', sans-serif; font-weight: 900;
+    font-size: 14pt; margin-bottom: 1mm;
+  }
+  .song-title-block p { font-size: 8pt; opacity: .75; }
+
+  .song-body {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5mm;
+  }
+  .song-lyrics {
+    background: #fdf6e3; border-radius: 3mm; padding: 5mm;
+    border-left: 4px solid;
+  }
+  .song-lyrics h3 {
+    font-family: 'Montserrat', sans-serif; font-weight: 800;
+    font-size: 8pt; text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 3mm; color: #555;
+  }
+  .verse {
+    margin-bottom: 3mm;
+  }
+  .verse p {
+    font-size: 9.5pt; line-height: 1.9; color: #222;
+    font-style: italic;
+  }
+  .verse .refrao { font-weight: 700; font-style: normal; }
+  .verse-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7pt; font-weight: 800;
+    color: #aaa; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 1mm;
+  }
+
+  .song-info { display: flex; flex-direction: column; gap: 3mm; }
+  .info-card {
+    background: #f8f8f8; border-radius: 3mm; padding: 4mm;
+    border-left: 3px solid #ddd;
+  }
+  .info-card h4 {
+    font-family: 'Montserrat', sans-serif; font-weight: 800;
+    font-size: 8pt; color: #333; margin-bottom: 2mm;
+    text-transform: uppercase; letter-spacing: .5px;
+  }
+  .info-card p { font-size: 8pt; color: #555; line-height: 1.5; }
+  .info-badges { display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 2mm; }
+  .info-badge {
+    font-family: 'Montserrat', sans-serif; font-weight: 700;
+    font-size: 6.5pt; padding: 1.5px 6px; border-radius: 10px;
+  }
+
+  .activity-box {
+    background: linear-gradient(135deg, #1a4a2e, #2d7a4f);
+    border-radius: 3mm; padding: 4mm; color: #fff;
+  }
+  .activity-box h4 {
+    font-family: 'Montserrat', sans-serif; font-weight: 800;
+    font-size: 8pt; color: #f5c842; margin-bottom: 2mm;
+  }
+  .activity-box p { font-size: 7.5pt; color: rgba(255,255,255,0.8); line-height: 1.5; }
+
+  /* ─── SCREEN / MOBILE ────────────────────────────── */
+  @media screen {
+    body { background: #071a0e; }
+
+    .cover {
+      min-height: 100vh;
+      height: auto;
+      padding: 40px 24px;
+      border-radius: 0;
+    }
+    .cover-border { inset: 16px; }
+    .cover-content { padding: 8px; }
+    .cover-notes { font-size: 2.5rem; }
+    .cover h1 { font-size: clamp(1.5rem, 7vw, 2rem); }
+    .cover h2 { font-size: clamp(0.9rem, 4vw, 1.1rem); }
+    .cover-desc { font-size: 0.9rem; max-width: 100%; }
+    .cover-songs {
+      grid-template-columns: 1fr 1fr;
+      max-width: 100%;
+      gap: 8px;
+    }
+    .cover-song-item { font-size: 0.8rem; padding: 8px 10px; border-radius: 8px; }
+
+    .intro-page {
+      padding: 24px 16px;
+      background: #fff;
+    }
+    .intro-box { border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+    .intro-box h2 { font-size: 1rem; }
+    .intro-box p { font-size: 0.9rem; }
+    .uso-grid { grid-template-columns: 1fr; gap: 10px; }
+    .uso-card { border-radius: 8px; padding: 12px; }
+    .uso-card h3 { font-size: 0.9rem; }
+    .uso-card p { font-size: 0.8rem; }
+
+    .song-page {
+      padding: 20px 16px;
+      background: #fff;
+    }
+    .song-header {
+      border-radius: 10px;
+      padding: 12px 14px;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .song-icon { font-size: 1.8rem; }
+    .song-title-block h2 { font-size: 1.1rem; }
+    .song-title-block p { font-size: 0.8rem; }
+
+    .song-body {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .song-lyrics { border-radius: 8px; padding: 14px; }
+    .song-lyrics h3 { font-size: 0.75rem; }
+    .verse p { font-size: 0.95rem; line-height: 2; }
+    .verse-label { font-size: 0.7rem; }
+
+    .info-card { border-radius: 8px; padding: 12px; }
+    .info-card h4 { font-size: 0.8rem; }
+    .info-card p { font-size: 0.8rem; }
+    .info-badge { font-size: 0.65rem; }
+
+    .activity-box { border-radius: 8px; padding: 12px; }
+    .activity-box h4 { font-size: 0.85rem; }
+    .activity-box p { font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════ CAPA ════════════ -->
+<div class="cover">
+  <div class="cover-border"></div>
+  <div class="cover-content">
+    <span class="cover-tag">✦ Filhos do Axé PRO ✦</span>
+    <div class="cover-notes">🎵</div>
+    <h1>Cartilha de<br/>Pontos Cantados<br/>Infantis</h1>
+    <h2>10 músicas sagradas adaptadas para crianças</h2>
+    <div class="divider"></div>
+    <p class="cover-desc">
+      Pontos cantados da Umbanda com letras simples e amorosas,
+      adaptados para que as crianças cantem, aprendam e se conectem
+      com os Orixás de forma alegre, respeitosa e cheia de axé.
+    </p>
+    <div class="cover-songs">
+      <div class="cover-song-item">🔱 Ponto de Exu</div>
+      <div class="cover-song-item">⚔️ Ponto de Ogum</div>
+      <div class="cover-song-item">🌊 Ponto de Iemanjá</div>
+      <div class="cover-song-item">💛 Ponto de Oxum</div>
+      <div class="cover-song-item">⚡ Ponto de Xangô</div>
+      <div class="cover-song-item">🪵 Ponto de Preto Velho</div>
+      <div class="cover-song-item">🏹 Ponto de Oxóssi</div>
+      <div class="cover-song-item">☁️ Ponto de Oxalá</div>
+      <div class="cover-song-item">🍭 Cosme e Damião</div>
+      <div class="cover-song-item">🌿 Ponto das Ervas</div>
+    </div>
+    <p class="cover-axe">✦ AXÉ ✦</p>
+  </div>
+</div>
+
+<!-- ════════════ COMO USAR ════════════ -->
+<div class="intro-page">
+  <div class="intro-box">
+    <h2>🎵 Como usar esta cartilha com as crianças</h2>
+    <p>
+      Os pontos cantados são músicas sagradas da Umbanda que carregam axé, amor e ensinamentos espirituais.
+      As versões desta cartilha foram adaptadas com linguagem simples e letras curtas para que crianças de
+      4 a 12 anos possam cantar com facilidade, aprender sobre cada Orixá e criar uma conexão amorosa
+      com a espiritualidade da família.
+    </p>
+  </div>
+  <div class="uso-grid">
+    <div class="uso-card">
+      <h3>🌅 Na manhã</h3>
+      <p>Cante um ponto ao acordar como forma de agradecer e pedir proteção ao Orixá do dia da semana.</p>
+    </div>
+    <div class="uso-card">
+      <h3>🏠 No terreiro</h3>
+      <p>Use na Gira das Crianças ou em momentos educativos no terreiro. As crianças adoram cantar juntas!</p>
+    </div>
+    <div class="uso-card">
+      <h3>🎨 Enquanto pinta</h3>
+      <p>Coloque o ponto do Orixá que a criança está colorindo. Aprende cantando e pintando ao mesmo tempo.</p>
+    </div>
+    <div class="uso-card">
+      <h3>🌙 Na hora de dormir</h3>
+      <p>Pontos mais suaves como Oxalá e Iemanjá são perfeitos para acalmar e abençoar na hora de dormir.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ PONTO 1 — EXU ════════════ -->
+<div class="song-page">
+  <div class="song-header" style="background:linear-gradient(135deg,#2c0a0a,#5a0000);border-left:4px solid #8b0000;">
+    <span class="song-icon">🔱</span>
+    <div class="song-title-block" style="color:#fff;">
+      <h2>Ponto de Exu</h2>
+      <p>Mensageiro sagrado das encruzilhadas</p>
+    </div>
+  </div>
+  <div class="song-body">
+    <div class="song-lyrics" style="border-color:#8b0000;">
+      <h3>🎵 Letra</h3>
+      <div class="verse">
+        <p class="refrao">
+          Laroyê, Exu, Laroyê!<br/>
+          Guardião das encruzilhadas, olhê!<br/>
+          Abre o caminho com axé<br/>
+          Nos protege sempre, Exu, Laroyê!
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso</div>
+        <p>
+          Com seu tridente na mão<br/>
+          Exu é mensageiro com razão<br/>
+          Entre os homens e os Orixás<br/>
+          Ele carrega nossa oração
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Refrão</div>
+        <p class="refrao">
+          Laroyê, Exu, Laroyê!<br/>
+          Guardião das encruzilhadas, olhê!<br/>
+          Abre o caminho com axé<br/>
+          Nos protege sempre, Exu, Laroyê!
+        </p>
+      </div>
+    </div>
+    <div class="song-info">
+      <div class="info-card" style="border-color:#8b0000;">
+        <h4>Sobre Exu</h4>
+        <p>Exu é o mensageiro dos Orixás. Sem ele, nenhuma comunicação entre os humanos e o mundo espiritual acontece. Por isso, é sempre o primeiro a ser saudado.</p>
+        <div class="info-badges">
+          <span class="info-badge" style="background:#8b0000;color:#fff;">Segunda-feira</span>
+          <span class="info-badge" style="background:#1a1a1a;color:#fff;">Preto e Vermelho</span>
+          <span class="info-badge" style="background:#f0f0f0;color:#333;">🔱 Tridente</span>
+        </div>
+      </div>
+      <div class="activity-box">
+        <h4>🎯 Atividade com a criança</h4>
+        <p>Pergunte para a criança: "Por que Exu é o primeiro a ser saudado?" Deixe ela responder com as palavras dela. Explique que é como pedir licença antes de entrar na casa de alguém.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ PONTO 2 — OGUM ════════════ -->
+<div class="song-page">
+  <div class="song-header" style="background:linear-gradient(135deg,#0a1f3a,#0d3d6b);border-left:4px solid #1a5276;">
+    <span class="song-icon">⚔️</span>
+    <div class="song-title-block" style="color:#fff;">
+      <h2>Ponto de Ogum</h2>
+      <p>Guerreiro protetor dos caminhos</p>
+    </div>
+  </div>
+  <div class="song-body">
+    <div class="song-lyrics" style="border-color:#1a5276;">
+      <h3>🎵 Letra</h3>
+      <div class="verse">
+        <p class="refrao">
+          Ogum Yê, Ogum Yê!<br/>
+          Guerreiro forte, olhê!<br/>
+          Com sua espada de aço<br/>
+          Nos defende com axé!
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso</div>
+        <p>
+          Ogum é nosso guerreiro<br/>
+          Protetor do caminho<br/>
+          Com escudo e com espada<br/>
+          Cuida de cada filhinho
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso 2</div>
+        <p>
+          De azul e de verde<br/>
+          Ele vem trabalhar<br/>
+          Abre todas as estradas<br/>
+          Para nos ajudar
+        </p>
+      </div>
+    </div>
+    <div class="song-info">
+      <div class="info-card" style="border-color:#1a5276;">
+        <h4>Sobre Ogum</h4>
+        <p>Ogum é o Orixá do ferro, da guerra e dos caminhos. Ele desbrava os obstáculos e protege quem está em movimento — viagens, trabalho, mudanças. Muito forte e corajoso!</p>
+        <div class="info-badges">
+          <span class="info-badge" style="background:#1a5276;color:#fff;">Terça-feira</span>
+          <span class="info-badge" style="background:#1e8449;color:#fff;">Azul e Verde</span>
+          <span class="info-badge" style="background:#f0f0f0;color:#333;">⚔️ Espada</span>
+        </div>
+      </div>
+      <div class="activity-box">
+        <h4>🎯 Atividade com a criança</h4>
+        <p>Peça para a criança desenhar a espada e o escudo de Ogum. Enquanto desenha, pergunte: "Quando você precisou de coragem, quem te ajudou?" Conecte com a proteção de Ogum.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ PONTO 3 — IEMANJÁ ════════════ -->
+<div class="song-page">
+  <div class="song-header" style="background:linear-gradient(135deg,#0a2a4a,#0d4a80);border-left:4px solid #1a6ea8;">
+    <span class="song-icon">🌊</span>
+    <div class="song-title-block" style="color:#fff;">
+      <h2>Ponto de Iemanjá</h2>
+      <p>Rainha do mar, mãe de todos</p>
+    </div>
+  </div>
+  <div class="song-body">
+    <div class="song-lyrics" style="border-color:#1a6ea8;">
+      <h3>🎵 Letra</h3>
+      <div class="verse">
+        <p class="refrao">
+          Odô Iyá, Odô Iyá!<br/>
+          Iemanjá, rainha do mar!<br/>
+          Com suas ondas azuis<br/>
+          Vem nos abençoar!
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso</div>
+        <p>
+          Iemanjá, linda sereia<br/>
+          Com coroa de estrela do mar<br/>
+          É a mãe de todos os Orixás<br/>
+          Que nos ensina a amar
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso 2</div>
+        <p>
+          No dia dois de fevereiro<br/>
+          Com flores vamos ao mar<br/>
+          Levar nosso amor pra ela<br/>
+          E receber seu axé sem par
+        </p>
+      </div>
+    </div>
+    <div class="song-info">
+      <div class="info-card" style="border-color:#1a6ea8;">
+        <h4>Sobre Iemanjá</h4>
+        <p>Iemanjá é a rainha do mar e mãe de todos os Orixás. Seu amor é tão grande quanto o oceano. Celebrada no dia 2 de fevereiro, quando as pessoas levam flores ao mar.</p>
+        <div class="info-badges">
+          <span class="info-badge" style="background:#1a6ea8;color:#fff;">Sábado</span>
+          <span class="info-badge" style="background:#1a6ea8;color:#fff;">Azul e Branco</span>
+          <span class="info-badge" style="background:#f0f0f0;color:#333;">🪞 Espelho</span>
+        </div>
+      </div>
+      <div class="activity-box">
+        <h4>🎯 Atividade com a criança</h4>
+        <p>Faça uma "oferenda simbólica" com a criança: coloque uma flor de papel dentro de uma bacia com água azul. Cante o ponto e explique a tradição do dia de Iemanjá com amor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ PONTO 4 — OXUM ════════════ -->
+<div class="song-page">
+  <div class="song-header" style="background:linear-gradient(135deg,#5a4a00,#8a7000);border-left:4px solid #d4a017;">
+    <span class="song-icon">💛</span>
+    <div class="song-title-block" style="color:#fff;">
+      <h2>Ponto de Oxum</h2>
+      <p>Rainha das águas doces, do amor e da beleza</p>
+    </div>
+  </div>
+  <div class="song-body">
+    <div class="song-lyrics" style="border-color:#d4a017;">
+      <h3>🎵 Letra</h3>
+      <div class="verse">
+        <p class="refrao">
+          Ora Yeyê Ô, Ora Yeyê!<br/>
+          Oxum linda, olhê!<br/>
+          Com seu leque dourado<br/>
+          Nos traz amor e axé!
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso</div>
+        <p>
+          Oxum é rainha do rio<br/>
+          Com seu espelho de ouro brilhando<br/>
+          Dona do amor e da alegria<br/>
+          Nossos corações vai enchendo
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso 2</div>
+        <p>
+          De amarelo ela se veste<br/>
+          De dourado ela reluz<br/>
+          Quem pede amor com fé<br/>
+          Oxum ilumina com sua luz
+        </p>
+      </div>
+    </div>
+    <div class="song-info">
+      <div class="info-card" style="border-color:#d4a017;">
+        <h4>Sobre Oxum</h4>
+        <p>Oxum é a Orixá do amor, da beleza e das águas doces (rios e cachoeiras). Ela representa a riqueza, a fertilidade e a alegria. Seu leque dourado afasta o que é ruim.</p>
+        <div class="info-badges">
+          <span class="info-badge" style="background:#d4a017;color:#fff;">Sábado</span>
+          <span class="info-badge" style="background:#d4a017;color:#fff;">Dourado</span>
+          <span class="info-badge" style="background:#f0f0f0;color:#333;">🪞 Leque</span>
+        </div>
+      </div>
+      <div class="activity-box">
+        <h4>🎯 Atividade com a criança</h4>
+        <p>Faça um "leque de Oxum" com a criança usando papel amarelo e dourado. Enquanto constroem, cantam o ponto. Ao final, a criança guarda o leque como símbolo de amor e proteção.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ PONTO 5 — PRETO VELHO ════════════ -->
+<div class="song-page">
+  <div class="song-header" style="background:linear-gradient(135deg,#1a1a1a,#2a2a2a);border-left:4px solid #666;">
+    <span class="song-icon">🪵</span>
+    <div class="song-title-block" style="color:#fff;">
+      <h2>Ponto de Preto Velho</h2>
+      <p>Vovô da sabedoria e da cura</p>
+    </div>
+  </div>
+  <div class="song-body">
+    <div class="song-lyrics" style="border-color:#555;">
+      <h3>🎵 Letra</h3>
+      <div class="verse">
+        <p class="refrao">
+          Licença, meu Vovô!<br/>
+          Preto Velho chegou!<br/>
+          Com sua bondade e amor<br/>
+          Nossa vida abençoou!
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso</div>
+        <p>
+          Vovô fuma seu cachimbo<br/>
+          Com paciência e sabedoria<br/>
+          Cura com ervas e palavras<br/>
+          Traz paz e alegria
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso 2</div>
+        <p>
+          Com sua bengala de madeira<br/>
+          Devagar ele vai chegando<br/>
+          No coração de cada filho<br/>
+          Vai curando e abençoando
+        </p>
+      </div>
+    </div>
+    <div class="song-info">
+      <div class="info-card" style="border-color:#555;">
+        <h4>Sobre Preto Velho</h4>
+        <p>Preto Velho representa a sabedoria dos ancestrais africanos trazidos ao Brasil. Com paciência, bondade e humor, ele cuida, aconselha e cura com ervas e orações.</p>
+        <div class="info-badges">
+          <span class="info-badge" style="background:#1a1a1a;color:#fff;">Segunda-feira</span>
+          <span class="info-badge" style="background:#555;color:#fff;">Preto e Branco</span>
+          <span class="info-badge" style="background:#f0f0f0;color:#333;">🪵 Cachimbo</span>
+        </div>
+      </div>
+      <div class="activity-box">
+        <h4>🎯 Atividade com a criança</h4>
+        <p>Converse com a criança sobre os avós e bisavós da família. Preto Velho representa toda a sabedoria dos mais velhos. Pergunte: "O que seu avô ou avó mais gosta de ensinar?"</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ PONTO 6 — COSME E DAMIÃO ════════════ -->
+<div class="song-page">
+  <div class="song-header" style="background:linear-gradient(135deg,#1a3a5a,#0d4a8a);border-left:4px solid #2980b9;">
+    <span class="song-icon">🍭</span>
+    <div class="song-title-block" style="color:#fff;">
+      <h2>Ponto de Cosme e Damião</h2>
+      <p>Gêmeos sagrados, protetores das crianças</p>
+    </div>
+  </div>
+  <div class="song-body">
+    <div class="song-lyrics" style="border-color:#2980b9;">
+      <h3>🎵 Letra</h3>
+      <div class="verse">
+        <p class="refrao">
+          Salve os Erês!<br/>
+          Cosme e Damião vieram!<br/>
+          Com doces e alegria<br/>
+          As crianças receberam!
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso</div>
+        <p>
+          Cosme e Damião são gêmeos<br/>
+          Protetores do neném<br/>
+          Dia vinte e sete de setembro<br/>
+          Trazem doce pra quem vem!
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso 2</div>
+        <p>
+          Brinquedos, balas e balões<br/>
+          São a alegria dos irmãos<br/>
+          Com risadas e cantigas<br/>
+          Espalham bênçãos de mão em mão
+        </p>
+      </div>
+    </div>
+    <div class="song-info">
+      <div class="info-card" style="border-color:#2980b9;">
+        <h4>Sobre Cosme e Damião</h4>
+        <p>Cosme e Damião são os gêmeos sagrados, protetores especiais das crianças. No dia 27 de setembro, recebem doces, balas e brinquedos. São a alegria pura da espiritualidade!</p>
+        <div class="info-badges">
+          <span class="info-badge" style="background:#2980b9;color:#fff;">27 de Setembro</span>
+          <span class="info-badge" style="background:#2980b9;color:#fff;">Azul e Branco</span>
+          <span class="info-badge" style="background:#f0f0f0;color:#333;">🍭 Doces</span>
+        </div>
+      </div>
+      <div class="activity-box">
+        <h4>🎯 Atividade com a criança</h4>
+        <p>No dia 27 de setembro, monte uma bandeja com doces e cante este ponto com as crianças. Distribua os doces ao final. Explique que estão celebrando os protetores das crianças!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ PONTO 7 — OXALÁ ════════════ -->
+<div class="song-page">
+  <div class="song-header" style="background:linear-gradient(135deg,#3a3a3a,#555);border-left:4px solid #aaa;">
+    <span class="song-icon">☁️</span>
+    <div class="song-title-block" style="color:#fff;">
+      <h2>Ponto de Oxalá</h2>
+      <p>Pai de todos, criador, senhor da paz</p>
+    </div>
+  </div>
+  <div class="song-body">
+    <div class="song-lyrics" style="border-color:#aaa;">
+      <h3>🎵 Letra</h3>
+      <div class="verse">
+        <p class="refrao">
+          Êpa Baba, Êpa Baba!<br/>
+          Oxalá, pai da criação!<br/>
+          De branco puro ele veste<br/>
+          E nos enche de bênção!
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso</div>
+        <p>
+          Oxalá é pai de todos<br/>
+          Da paz e da perfeição<br/>
+          Criou o mundo e os humanos<br/>
+          Com amor e com razão
+        </p>
+      </div>
+      <div class="verse">
+        <div class="verse-label">Verso 2</div>
+        <p>
+          Na sexta-feira é seu dia<br/>
+          De branco nos vestimos<br/>
+          Pedindo paz e sabedoria<br/>
+          Para tudo que vivemos
+        </p>
+      </div>
+    </div>
+    <div class="song-info">
+      <div class="info-card" style="border-color:#aaa;">
+        <h4>Sobre Oxalá</h4>
+        <p>Oxalá é o pai de todos os Orixás e o criador da humanidade. Representa a paz, a criação e a pureza. Nas sextas-feiras, muitos umbandistas vestem branco em sua homenagem.</p>
+        <div class="info-badges">
+          <span class="info-badge" style="background:#aaa;color:#fff;">Sexta-feira</span>
+          <span class="info-badge" style="background:#eee;color:#333;">Branco Puro</span>
+          <span class="info-badge" style="background:#f0f0f0;color:#333;">🦯 Paxorô</span>
+        </div>
+      </div>
+      <div class="activity-box">
+        <h4>🎯 Atividade com a criança</h4>
+        <p>Na sexta-feira, incentive a criança a vestir algo branco. Explique que é o dia de Oxalá, o pai de todos. Cantem o ponto juntos e façam uma oração de paz para a família.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ PÁGINA FINAL ════════════ -->
+<div class="song-page" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:150mm;text-align:center;">
+  <div style="background:linear-gradient(160deg,#0b2818,#1a4a2e);border-radius:4mm;padding:12mm;max-width:140mm;color:#fff;">
+    <p style="font-size:30pt;margin-bottom:4mm;">🎵✨</p>
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:14pt;color:#f5c842;margin-bottom:4mm;">Que o Axé sempre ecoe<br/>no coração dos seus pequenos!</h2>
+    <div style="width:30mm;height:2px;background:linear-gradient(90deg,transparent,#d4a017,transparent);margin:3mm auto;"></div>
+    <p style="font-size:9pt;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:4mm;">
+      A música é uma das formas mais poderosas de conexão espiritual.
+      Cada ponto cantado é uma oração, uma homenagem e um abraço para os Orixás.
+      Ao cantar com seu filho, você está transmitindo a mais preciosa herança:
+      a fé, o amor e a cultura afro-brasileira.
+    </p>
+    <p style="font-family:'Montserrat',sans-serif;font-size:11pt;font-weight:900;color:#f5c842;letter-spacing:3px;">✦ AXÉ ✦</p>
+    <p style="margin-top:4mm;font-size:7.5pt;color:rgba(255,255,255,0.35);letter-spacing:1px;">Filhos do Axé PRO — Umbanda Para Todos</p>
+  </div>
+</div>
+
+</body>
+</html>
+

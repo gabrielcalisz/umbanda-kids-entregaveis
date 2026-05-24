@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '973952325383470');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=973952325383470&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+<title>Flashcards dos Orixás – Filhos do Axé PRO</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+  @page { size: A4 portrait; margin: 8mm; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Lato', sans-serif; background: #fff; }
+
+  /* ── INSTRUCTIONS PAGE ── */
+  .instructions {
+    width: 100%; padding: 10mm;
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center;
+    page-break-after: always;
+    background: linear-gradient(160deg, #0b2818, #1a4a2e);
+    min-height: 277mm;
+    justify-content: center;
+  }
+  .inst-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #d4a017, #a07810);
+    color: #fff; font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 8pt;
+    padding: 4px 16px; border-radius: 20px;
+    letter-spacing: 2px; margin-bottom: 6mm;
+  }
+  .instructions h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; font-size: 24pt;
+    color: #f5c842; margin-bottom: 3mm;
+  }
+  .instructions h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13pt; font-weight: 600;
+    color: rgba(255,255,255,0.6); margin-bottom: 8mm;
+  }
+  .divider { width: 40mm; height: 2px; background: linear-gradient(90deg,transparent,#d4a017,transparent); margin: 4mm auto; }
+  .inst-steps { max-width: 130mm; text-align: left; margin-bottom: 8mm; }
+  .inst-step {
+    display: flex; gap: 4mm; align-items: flex-start;
+    margin-bottom: 4mm; font-size: 10pt; color: rgba(255,255,255,0.8);
+  }
+  .inst-step .num {
+    background: linear-gradient(135deg,#d4a017,#a07810);
+    color: #fff; font-family: 'Montserrat', sans-serif;
+    font-weight: 900; font-size: 9pt;
+    width: 7mm; height: 7mm; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .inst-orixas {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;
+  }
+  .inst-chip {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(212,160,23,0.3);
+    color: #f5c842; font-family: 'Montserrat', sans-serif;
+    font-weight: 700; font-size: 7.5pt;
+    padding: 3px 10px; border-radius: 20px;
+  }
+  .inst-axe { margin-top: 6mm; font-family:'Montserrat',sans-serif; font-size:9pt; color:rgba(212,160,23,0.5); letter-spacing:3px; }
+
+  /* ── CARD SHEET ── */
+  .card-sheet { page-break-before: always; }
+  .sheet-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; font-size: 7pt;
+    color: #aaa; text-align: center;
+    text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 3mm;
+  }
+  .sheet-label span { color: #d4a017; }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4mm;
+  }
+
+  /* ── SINGLE CARD FRONT ── */
+  .card-front {
+    height: 70mm;
+    border-radius: 4mm;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 4mm;
+    border: 2px solid;
+  }
+  .card-front::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.12) 0%, transparent 65%);
+  }
+  .card-front .brand {
+    position: absolute; top: 3mm; left: 0; right: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; font-size: 6pt;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+  .card-front .icon { font-size: 30pt; margin-bottom: 2mm; position: relative; z-index: 2; }
+  .card-front h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; font-size: 14pt;
+    color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    position: relative; z-index: 2;
+    margin-bottom: 2mm;
+  }
+  .card-front .saudacao {
+    font-size: 7pt; color: rgba(255,255,255,0.65);
+    font-style: italic; position: relative; z-index: 2;
+  }
+  .card-front .colors-strip {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 5mm; display: flex;
+  }
+  .color-seg { flex: 1; }
+
+  /* ── SINGLE CARD BACK ── */
+  .card-back {
+    height: 70mm;
+    border-radius: 4mm;
+    background: #fdf6e3;
+    border: 2px solid;
+    display: flex; flex-direction: column;
+    padding: 4mm;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-back .cb-header {
+    display: flex; align-items: center; gap: 2mm;
+    margin-bottom: 2mm;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 2mm;
+  }
+  .card-back .cb-icon { font-size: 14pt; }
+  .card-back .cb-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; font-size: 9pt;
+  }
+  .cb-row {
+    display: flex; gap: 1.5mm; flex-wrap: wrap;
+    margin-bottom: 1.5mm;
+  }
+  .cb-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; font-size: 6pt;
+    padding: 1px 5px; border-radius: 8px;
+  }
+  .card-back .cb-desc {
+    font-size: 7pt; color: #444;
+    line-height: 1.5; flex: 1;
+  }
+  .card-back .cb-footer {
+    font-size: 6pt; color: #888;
+    text-align: right; margin-top: auto;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+  }
+  .cut-line {
+    border-top: 1px dashed #ccc;
+    margin: 3mm 0;
+    font-size: 6pt; color: #bbb; text-align: center;
+    position: relative;
+  }
+  .cut-line::before { content: '✂ recorte aqui'; position: absolute; top: -4pt; left: 50%; transform: translateX(-50%); background: #fff; padding: 0 2mm; }
+
+  /* ─── SCREEN / MOBILE ────────────────────────────── */
+  @media screen {
+    body { background: #071a0e; }
+
+    .instructions {
+      min-height: auto;
+      padding: 40px 24px;
+      border-radius: 0;
+    }
+    .instructions h1 { font-size: 1.7rem; }
+    .instructions h2 { font-size: 1rem; }
+    .inst-steps { max-width: 100%; }
+    .inst-step { font-size: 0.95rem; gap: 12px; }
+    .inst-step .num { width: 28px; height: 28px; font-size: 0.85rem; flex-shrink: 0; }
+
+    .card-sheet {
+      padding: 16px;
+      background: #fff;
+      margin: 0;
+    }
+    .sheet-label { font-size: 0.75rem; margin-bottom: 12px; }
+
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .card-front {
+      height: auto;
+      min-height: 44vw;
+      border-radius: 10px;
+      padding: 12px 8px;
+    }
+    .card-front .icon { font-size: 2rem; }
+    .card-front h3 { font-size: 1rem; }
+    .card-front .saudacao { font-size: 0.7rem; }
+    .card-front .brand { font-size: 0.6rem; }
+
+    .card-back {
+      height: auto;
+      min-height: 44vw;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .card-back .cb-icon { font-size: 1.1rem; }
+    .card-back .cb-name { font-size: 0.85rem; }
+    .card-back .cb-desc { font-size: 0.75rem; }
+    .cb-badge { font-size: 0.65rem; }
+    .card-back .cb-footer { font-size: 0.6rem; }
+
+    .cut-line { display: none; }
+  }
+
+  @media screen and (max-width: 400px) {
+    .cards-grid { grid-template-columns: 1fr; }
+    .card-front { min-height: 200px; }
+    .card-back { min-height: 200px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════ CAPA / INSTRUÇÕES ════════════ -->
+<div class="instructions">
+  <span class="inst-tag">✦ Filhos do Axé PRO ✦</span>
+  <h1>Flashcards dos Orixás</h1>
+  <h2>12 Cards Sagrados para Aprender Brincando</h2>
+  <div class="divider"></div>
+  <div class="inst-steps">
+    <div class="inst-step"><span class="num">1</span><span>Imprima as páginas de <strong>FRENTE</strong> dos cards (páginas ímpares)</span></div>
+    <div class="inst-step"><span class="num">2</span><span>Imprima as páginas de <strong>VERSO</strong> na mesma folha (páginas pares)</span></div>
+    <div class="inst-step"><span class="num">3</span><span>Recorte seguindo as linhas tracejadas ✂</span></div>
+    <div class="inst-step"><span class="num">4</span><span>Mostre a frente do card para a criança e pergunte sobre o Orixá!</span></div>
+    <div class="inst-step"><span class="num">5</span><span>Use para aprender nomes, cores, saudações e histórias sagradas 🌟</span></div>
+  </div>
+  <div class="inst-orixas">
+    <span class="inst-chip">🔱 Exu</span><span class="inst-chip">⚔️ Ogum</span><span class="inst-chip">🏹 Oxóssi</span>
+    <span class="inst-chip">🌾 Omulu</span><span class="inst-chip">⚡ Xangô</span><span class="inst-chip">🌪️ Iansã</span>
+    <span class="inst-chip">💛 Oxum</span><span class="inst-chip">🌊 Iemanjá</span><span class="inst-chip">☁️ Oxalá</span>
+    <span class="inst-chip">🌧️ Nanã</span><span class="inst-chip">🪵 Preto Velho</span><span class="inst-chip">🍭 Cosme e Damião</span>
+  </div>
+  <p class="inst-axe">✦ AXÉ ✦</p>
+</div>
+
+<!-- ════════════ FRENTES ════════════ -->
+<div class="card-sheet">
+  <p class="sheet-label">FRENTE dos cards — <span>imprima esta página primeiro</span></p>
+  <div class="cards-grid">
+
+    <!-- EXU -->
+    <div class="card-front" style="background:linear-gradient(145deg,#2c0a0a,#5a0000);border-color:#8b0000;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">🔱</span>
+      <h3>Exu</h3>
+      <p class="saudacao">"Laroyê Exu!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#8b0000;"></div><div class="color-seg" style="background:#1a1a1a;"></div></div>
+    </div>
+
+    <!-- OGUM -->
+    <div class="card-front" style="background:linear-gradient(145deg,#0a1f3a,#0d3d6b);border-color:#1a5276;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">⚔️</span>
+      <h3>Ogum</h3>
+      <p class="saudacao">"Ogum Yê!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#1a5276;"></div><div class="color-seg" style="background:#1e8449;"></div></div>
+    </div>
+
+    <!-- OXÓSSI -->
+    <div class="card-front" style="background:linear-gradient(145deg,#0a2e1a,#0d5c2e);border-color:#1e8449;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">🏹</span>
+      <h3>Oxóssi</h3>
+      <p class="saudacao">"Okê Arô!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#1e8449;"></div><div class="color-seg" style="background:#1a5276;"></div></div>
+    </div>
+
+    <!-- OMULU -->
+    <div class="card-front" style="background:linear-gradient(145deg,#1a1a1a,#333);border-color:#555;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">🌾</span>
+      <h3>Omulu</h3>
+      <p class="saudacao">"Atotô Obaluaê!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#1a1a1a;"></div><div class="color-seg" style="background:#fff;"></div><div class="color-seg" style="background:#8b0000;"></div></div>
+    </div>
+
+    <!-- XANGÔ -->
+    <div class="card-front" style="background:linear-gradient(145deg,#5a0a0a,#8b1a1a);border-color:#922b21;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">⚡</span>
+      <h3>Xangô</h3>
+      <p class="saudacao">"Kawô Kabiyesile!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#922b21;"></div><div class="color-seg" style="background:#f0f0f0;"></div></div>
+    </div>
+
+    <!-- IANSÃ -->
+    <div class="card-front" style="background:linear-gradient(145deg,#6b1a0a,#a0280a);border-color:#cb4335;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">🌪️</span>
+      <h3>Iansã</h3>
+      <p class="saudacao">"Epahei Iansã!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#cb4335;"></div><div class="color-seg" style="background:#a04000;"></div></div>
+    </div>
+
+    <!-- OXUM -->
+    <div class="card-front" style="background:linear-gradient(145deg,#5a4a00,#8a7000);border-color:#d4a017;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">💛</span>
+      <h3>Oxum</h3>
+      <p class="saudacao">"Ora Yeyê Ô!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#d4a017;"></div><div class="color-seg" style="background:#f5c842;"></div></div>
+    </div>
+
+    <!-- IEMANJÁ -->
+    <div class="card-front" style="background:linear-gradient(145deg,#0a2a4a,#0d4a80);border-color:#1a6ea8;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">🌊</span>
+      <h3>Iemanjá</h3>
+      <p class="saudacao">"Odô Iyá!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#1a6ea8;"></div><div class="color-seg" style="background:#e8f0ff;"></div></div>
+    </div>
+
+    <!-- OXALÁ -->
+    <div class="card-front" style="background:linear-gradient(145deg,#3a3a3a,#555);border-color:#aaa;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">☁️</span>
+      <h3>Oxalá</h3>
+      <p class="saudacao">"Êpa Baba!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#eee;"></div><div class="color-seg" style="background:#ccc;"></div></div>
+    </div>
+
+    <!-- NANÃ -->
+    <div class="card-front" style="background:linear-gradient(145deg,#2a1a3a,#4a2a6a);border-color:#7d3c98;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">🌧️</span>
+      <h3>Nanã</h3>
+      <p class="saudacao">"Saluba Nanã!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#7d3c98;"></div><div class="color-seg" style="background:#e8d8f0;"></div></div>
+    </div>
+
+    <!-- PRETO VELHO -->
+    <div class="card-front" style="background:linear-gradient(145deg,#1a1a1a,#2a2a2a);border-color:#666;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">🪵</span>
+      <h3>Preto Velho</h3>
+      <p class="saudacao">"Licença, meu Vovô!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#1a1a1a;"></div><div class="color-seg" style="background:#f0f0f0;"></div></div>
+    </div>
+
+    <!-- COSME E DAMIÃO -->
+    <div class="card-front" style="background:linear-gradient(145deg,#1a3a5a,#0d4a8a);border-color:#2980b9;">
+      <span class="brand">Filhos do Axé</span>
+      <span class="icon">🍭</span>
+      <h3>Cosme e Damião</h3>
+      <p class="saudacao">"Salve os Erês!"</p>
+      <div class="colors-strip"><div class="color-seg" style="background:#2980b9;"></div><div class="color-seg" style="background:#e8f8ff;"></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════ VERSOS ════════════ -->
+<div class="card-sheet" style="page-break-before:always;">
+  <p class="sheet-label">VERSO dos cards — <span>imprima no verso da folha anterior</span></p>
+  <div class="cards-grid">
+
+    <div class="card-back" style="border-color:#8b0000;">
+      <div class="cb-header"><span class="cb-icon">🔱</span><span class="cb-name" style="color:#8b0000;">Exu</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#8b0000;color:#fff;">Segunda-feira</span><span class="cb-badge" style="background:#1a1a1a;color:#fff;">Preto</span><span class="cb-badge" style="background:#8b0000;color:#fff;">Vermelho</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">🗝️ Encruzilhadas</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">🔱 Tridente</span></div>
+      <p class="cb-desc">Mensageiro sagrado entre os humanos e os Orixás. Guardião das encruzilhadas, abre e fecha os caminhos. Deve ser reverenciado antes de qualquer trabalho espiritual.</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+    <div class="card-back" style="border-color:#1a5276;">
+      <div class="cb-header"><span class="cb-icon">⚔️</span><span class="cb-name" style="color:#1a5276;">Ogum</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#1a5276;color:#fff;">Terça-feira</span><span class="cb-badge" style="background:#1a5276;color:#fff;">Azul</span><span class="cb-badge" style="background:#1e8449;color:#fff;">Verde</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">⚔️ Ferro</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">🛡️ Espada</span></div>
+      <p class="cb-desc">Guerreiro do ferro e dos metais. Protege os caminhos e vence os obstáculos. Patrono dos trabalhadores e dos que buscam justiça e vitória na vida.</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+    <div class="card-back" style="border-color:#1e8449;">
+      <div class="cb-header"><span class="cb-icon">🏹</span><span class="cb-name" style="color:#1e8449;">Oxóssi</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#1e8449;color:#fff;">Quinta-feira</span><span class="cb-badge" style="background:#1e8449;color:#fff;">Verde</span><span class="cb-badge" style="background:#1a5276;color:#fff;">Azul</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">🌿 Floresta</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">🏹 Arco e flecha</span></div>
+      <p class="cb-desc">Rei das matas e da caça. Provedor e protetor da natureza. Ensina as crianças sobre o respeito às plantas, animais e ao meio ambiente sagrado.</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+    <div class="card-back" style="border-color:#555;">
+      <div class="cb-header"><span class="cb-icon">🌾</span><span class="cb-name" style="color:#555;">Omulu</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#1a1a1a;color:#fff;">Segunda-feira</span><span class="cb-badge" style="background:#555;color:#fff;">Preto/Branco</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">🌍 Terra</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">🌾 Xaxará</span></div>
+      <p class="cb-desc">Senhor das doenças e da cura. Orixá da saúde e da medicina. Ensina que toda doença pode ser curada com fé e cuidado. Muito respeitado e amado.</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+    <div class="card-back" style="border-color:#922b21;">
+      <div class="cb-header"><span class="cb-icon">⚡</span><span class="cb-name" style="color:#922b21;">Xangô</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#922b21;color:#fff;">Quarta-feira</span><span class="cb-badge" style="background:#922b21;color:#fff;">Vermelho</span><span class="cb-badge" style="background:#eee;color:#333;">Branco</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">⚡ Trovão</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">🪓 Machado duplo</span></div>
+      <p class="cb-desc">Rei da justiça e dos trovões. Seu machado duplo (oxê) representa a justiça que corta em todos os lados. Protege os honestos e pune os injustos.</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+    <div class="card-back" style="border-color:#cb4335;">
+      <div class="cb-header"><span class="cb-icon">🌪️</span><span class="cb-name" style="color:#cb4335;">Iansã</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#cb4335;color:#fff;">Quarta-feira</span><span class="cb-badge" style="background:#cb4335;color:#fff;">Vermelho</span><span class="cb-badge" style="background:#a04000;color:#fff;">Marrom</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">🌪️ Ventos</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">🏇 Eruexim</span></div>
+      <p class="cb-desc">Guerreira dos ventos e das tempestades. Rainha corajosa que não teme nenhum desafio. Ensina as crianças a serem fortes e enfrentarem os medos com coragem.</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+    <div class="card-back" style="border-color:#d4a017;">
+      <div class="cb-header"><span class="cb-icon">💛</span><span class="cb-name" style="color:#b8860b;">Oxum</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#d4a017;color:#fff;">Sábado</span><span class="cb-badge" style="background:#d4a017;color:#fff;">Dourado</span><span class="cb-badge" style="background:#f5c842;color:#333;">Amarelo</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">💧 Rios</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">🪞 Leque e espelho</span></div>
+      <p class="cb-desc">Rainha das águas doces, do amor e da beleza. Dona da riqueza, da fertilidade e da maternidade. Sua energia dourada traz alegria, abundância e amor às famílias.</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+    <div class="card-back" style="border-color:#1a6ea8;">
+      <div class="cb-header"><span class="cb-icon">🌊</span><span class="cb-name" style="color:#1a6ea8;">Iemanjá</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#1a6ea8;color:#fff;">Sábado</span><span class="cb-badge" style="background:#1a6ea8;color:#fff;">Azul</span><span class="cb-badge" style="background:#eee;color:#333;">Branco</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">🌊 Mar</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">🪞 Espelho e pente</span></div>
+      <p class="cb-desc">Rainha do mar e mãe de todos os Orixás. Protetora das famílias e das crianças. Seu amor é imenso como o oceano. Celebrada dia 2 de fevereiro e 31 de dezembro.</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+    <div class="card-back" style="border-color:#aaa;">
+      <div class="cb-header"><span class="cb-icon">☁️</span><span class="cb-name" style="color:#555;">Oxalá</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#aaa;color:#fff;">Sexta-feira</span><span class="cb-badge" style="background:#eee;color:#333;">Branco</span><span class="cb-badge" style="background:#ccc;color:#333;">Prata</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">🕊️ Paz</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">🦯 Paxorô</span></div>
+      <p class="cb-desc">Pai de todos os Orixás e criador da humanidade. Orixá da paz, da criação e da pureza. Usa branco puro. Seus filhos pedem sabedoria e tranquilidade nas sextas-feiras.</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+    <div class="card-back" style="border-color:#7d3c98;">
+      <div class="cb-header"><span class="cb-icon">🌧️</span><span class="cb-name" style="color:#7d3c98;">Nanã</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#7d3c98;color:#fff;">Segunda-feira</span><span class="cb-badge" style="background:#7d3c98;color:#fff;">Lilás</span><span class="cb-badge" style="background:#eee;color:#333;">Branco</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">🌧️ Chuva e lama</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">🌾 Ibiri</span></div>
+      <p class="cb-desc">A mais velha de todos os Orixás. Dona da lama primordial com que Oxalá modelou os humanos. Ensina sobre os ciclos da vida, da morte e do renascimento com serenidade.</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+    <div class="card-back" style="border-color:#666;">
+      <div class="cb-header"><span class="cb-icon">🪵</span><span class="cb-name" style="color:#555;">Preto Velho</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#1a1a1a;color:#fff;">Segunda-feira</span><span class="cb-badge" style="background:#555;color:#fff;">Preto</span><span class="cb-badge" style="background:#eee;color:#333;">Branco</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">🌿 Sabedoria</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">🪵 Cachimbo</span></div>
+      <p class="cb-desc">Espírito ancestral de sabedoria africana. Curandeiro bondoso que orienta com amor e paciência. Representa a resistência e a dignidade do povo africano no Brasil.</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+    <div class="card-back" style="border-color:#2980b9;">
+      <div class="cb-header"><span class="cb-icon">🍭</span><span class="cb-name" style="color:#2980b9;">Cosme e Damião</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#2980b9;color:#fff;">27 de Setembro</span><span class="cb-badge" style="background:#2980b9;color:#fff;">Azul</span><span class="cb-badge" style="background:#eee;color:#333;">Branco</span></div>
+      <div class="cb-row"><span class="cb-badge" style="background:#f0f0f0;color:#333;">🍭 Doces</span><span class="cb-badge" style="background:#f0f0f0;color:#333;">👦 Crianças</span></div>
+      <p class="cb-desc">Gêmeos sagrados protetores das crianças. No dia 27 de setembro recebem doces, balas e brinquedos. São a alegria pura e a inocência da espiritualidade. Muito amados!</p>
+      <p class="cb-footer">✦ Filhos do Axé PRO ✦</p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
+
