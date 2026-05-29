@@ -579,6 +579,159 @@
     }
 
     /* ══════════════════════════════
+       SEÇÃO: 2 PLANOS
+    ══════════════════════════════ */
+    .plans-section {
+      margin: 40px 0;
+    }
+    .plans-title {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      color: var(--brown);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .plans-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 28px;
+    }
+    @media (max-width: 560px) {
+      .plans-grid { grid-template-columns: 1fr; }
+    }
+    .plan-card {
+      background: white;
+      border-radius: 28px;
+      padding: 32px 24px;
+      box-shadow: var(--shadow);
+      border: 2px solid var(--cream-dark);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .plan-card.pro {
+      border: 3px solid var(--sage);
+      background: linear-gradient(160deg, #f0faf5, white);
+    }
+    .plan-badge {
+      display: inline-block;
+      font-weight: 900;
+      font-size: 0.72rem;
+      padding: 5px 16px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 14px;
+      align-self: flex-start;
+    }
+    .plan-badge.basic { background: var(--cream-dark); color: var(--brown-mid); }
+    .plan-badge.pro-badge {
+      background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+      color: white;
+      box-shadow: 0 3px 10px rgba(74,138,112,0.4);
+    }
+    .plan-popular {
+      position: absolute;
+      top: 16px; right: -24px;
+      background: var(--peach);
+      color: white;
+      font-size: 0.6rem;
+      font-weight: 900;
+      padding: 4px 32px;
+      transform: rotate(45deg);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .plan-name {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.5rem;
+      color: var(--brown);
+      margin-bottom: 6px;
+    }
+    .plan-desc {
+      font-size: 0.82rem;
+      color: var(--brown-mid);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .plan-price-box {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 14px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .plan-card.pro .plan-price-box {
+      background: var(--sage-light);
+    }
+    .plan-from {
+      font-size: 0.8rem;
+      color: var(--brown-mid);
+      text-decoration: line-through;
+    }
+    .plan-price {
+      font-family: 'Fredoka One', cursive;
+      font-size: 2.4rem;
+      color: var(--sage-dark);
+      line-height: 1;
+    }
+    .plan-price sup {
+      font-size: 50%;
+      vertical-align: top;
+      margin-top: 8px;
+      display: inline-block;
+    }
+    .plan-once {
+      font-size: 0.75rem;
+      color: var(--brown-mid);
+      margin-top: 2px;
+    }
+    .plan-items {
+      list-style: none;
+      flex: 1;
+      margin-bottom: 22px;
+    }
+    .plan-items li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--brown);
+      padding: 5px 0;
+      border-bottom: 1px solid var(--cream-dark);
+      line-height: 1.4;
+    }
+    .plan-items li:last-child { border-bottom: none; }
+    .plan-items li .check { color: var(--sage-dark); font-size: 0.9rem; flex-shrink: 0; }
+    .plan-items li .lock { color: #ccc; font-size: 0.9rem; flex-shrink: 0; }
+    .plan-items li.disabled { color: #bbb; }
+    .plan-cta {
+      display: block;
+      text-align: center;
+      padding: 14px;
+      border-radius: 22px;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.2s, filter 0.2s;
+    }
+    .plan-cta:hover { transform: scale(1.03); filter: brightness(1.06); }
+    .plan-cta.basic-cta {
+      background: var(--cream-dark);
+      color: var(--brown);
+      border: 2px solid var(--cream-dark);
+    }
+    .plan-cta.pro-cta {
+      background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+      color: white;
+      box-shadow: 0 6px 20px rgba(74,138,112,0.4);
+      animation: pulse-btn 2.5s ease-in-out infinite;
+    }
+    .plan-cta.pro-cta:hover { animation: none; }
+
+    /* ══════════════════════════════
        SEÇÃO: GARANTIA
     ══════════════════════════════ */
     .guarantee-box {
@@ -740,10 +893,10 @@
   <!-- Sticky CTA -->
   <div class="sticky-cta" id="stickyCta">
     <div class="sticky-price">
-      <div class="from">R$ 29,90</div>
-      <div class="to">R$ 12,90</div>
+      <div class="from">Básico R$ 14,90</div>
+      <div class="to">PRO R$ 24,90</div>
     </div>
-    <a href="https://pay.lowify.com.br/checkout?product_id=0pK4aE" class="sticky-btn">🎨 Quero Agora!</a>
+    <a href="#comprar" class="sticky-btn">🌿 Ver Planos!</a>
   </div>
 
   <!-- Top bar -->
@@ -778,14 +931,17 @@
       </div>
 
       <div class="price-hero">
-        <span class="old">De R$ 29,90</span>
-        <span class="new">R$ 12,90</span>
-        <span class="today">Só Hoje</span>
+        <span class="old">A partir de</span>
+        <span class="new">R$ 14,90</span>
+        <span class="today">Básico</span>
+        &nbsp;&nbsp;
+        <span class="new" style="color:var(--sage-dark)">R$ 24,90</span>
+        <span class="today" style="background:var(--sage-dark)">PRO</span>
       </div>
 
       <br/>
-      <a href="https://pay.lowify.com.br/checkout?product_id=0pK4aE" class="cta-main">
-        🌿 Quero Meu Kit Agora!
+      <a href="#comprar" class="cta-main">
+        🌿 Ver os Planos e Garantir!
       </a>
       <p class="secure-line">🔒 Compra 100% Segura · Acesso Imediato · 7 dias de garantia</p>
     </div>
@@ -925,33 +1081,76 @@
       </div>
     </section>
 
-    <!-- ══════ OFERTA ══════ -->
-    <div class="offer-box" id="comprar">
-      <div class="offer-tag">🌿 Oferta Especial</div>
-      <h2>Tudo isso por apenas…</h2>
+    <!-- ══════ 2 PLANOS ══════ -->
+    <div class="plans-section" id="comprar">
+      <h2 class="plans-title">Escolha seu <span style="color:var(--sage-dark)">Plano</span> 🌿</h2>
+      <p class="section-sub">Ambos com acesso imediato e 7 dias de garantia</p>
 
-      <!-- IMAGEM 8: bobbie-offer-mockup.jpg -->
-      <img class="offer-mockup" src="https://i.imgur.com/VyM6lTl.jpg" alt="Kit Orixás Fofos" />
+      <!-- IMAGEM 8: bobbie-planos-mockup.jpg — os dois mockups lado a lado numa cena fofa -->
+      <img class="offer-mockup" src="https://i.imgur.com/VyM6lTl.jpg" alt="Planos Orixás Fofos"
+           style="max-width:480px;margin:0 auto 28px;display:block;border-radius:20px;width:100%;aspect-ratio:4/3;object-fit:cover;" />
 
-      <div class="offer-includes">
-        <span>✓ +150 Desenhos dos Orixás</span>
-        <span>✓ Caça-palavras e Labirintos</span>
-        <span>✓ 18 Joguinhos de Umbanda</span>
-        <span>✓ E-book Guia Umbanda Kids</span>
-        <span>✓ PDF para Imprimir</span>
-        <span>✓ Acesso Imediato</span>
+      <div class="plans-grid">
+
+        <!-- PLANO BÁSICO -->
+        <div class="plan-card">
+          <span class="plan-badge basic">Plano Básico</span>
+          <div class="plan-name">Kit Orixás Fofos</div>
+          <div class="plan-desc">Perfeito para começar a aproximar as crianças da Umbanda!</div>
+          <div class="plan-price-box">
+            <div class="plan-from">De R$ 29,90</div>
+            <div class="plan-price"><sup>R$</sup>14,90</div>
+            <div class="plan-once">pagamento único</div>
+          </div>
+          <ul class="plan-items">
+            <li><span class="check">✅</span> +150 Desenhos dos Orixás para Colorir</li>
+            <li><span class="check">✅</span> 18 Joguinhos Interativos de Umbanda</li>
+            <li><span class="check">✅</span> Caça-palavras e Labirintos</li>
+            <li><span class="check">✅</span> PDF para Imprimir</li>
+            <li><span class="check">✅</span> Acesso Imediato</li>
+            <li class="disabled"><span class="lock">🔒</span> Máscaras de Orixás</li>
+            <li class="disabled"><span class="lock">🔒</span> Moldes Sem Cor + Coloridos</li>
+            <li class="disabled"><span class="lock">🔒</span> Calendário Umbanda 2026</li>
+            <li class="disabled"><span class="lock">🔒</span> Certificado Oficial</li>
+            <li class="disabled"><span class="lock">🔒</span> Cartilha de Pontos + Flash Cards</li>
+          </ul>
+          <a href="LINK_CHECKOUT_BASICO" class="plan-cta basic-cta">
+            Quero o Básico — R$ 14,90
+          </a>
+        </div>
+
+        <!-- PLANO PRO -->
+        <div class="plan-card pro">
+          <div class="plan-popular">MAIS COMPLETO</div>
+          <span class="plan-badge pro-badge">✦ Plano PRO ✦</span>
+          <div class="plan-name">Kit Orixás Fofos <span style="color:var(--sage-dark)">PRO</span></div>
+          <div class="plan-desc">Tudo do básico + 7 bônus exclusivos para o aprendizado completo!</div>
+          <div class="plan-price-box">
+            <div class="plan-from">De R$ 49,90</div>
+            <div class="plan-price"><sup>R$</sup>24,90</div>
+            <div class="plan-once">pagamento único</div>
+          </div>
+          <ul class="plan-items">
+            <li><span class="check">✅</span> +150 Desenhos dos Orixás para Colorir</li>
+            <li><span class="check">✅</span> 18 Joguinhos Interativos de Umbanda</li>
+            <li><span class="check">✅</span> Caça-palavras e Labirintos</li>
+            <li><span class="check">✅</span> PDF para Imprimir</li>
+            <li><span class="check">✅</span> Acesso Imediato</li>
+            <li><span class="check">✅</span> <strong>Máscaras de Orixás</strong></li>
+            <li><span class="check">✅</span> <strong>Moldes Sem Cor + Já Coloridos</strong></li>
+            <li><span class="check">✅</span> <strong>Calendário Umbanda 2026</strong></li>
+            <li><span class="check">✅</span> <strong>Certificado Oficial Filho do Axé</strong></li>
+            <li><span class="check">✅</span> <strong>Cartilha de Pontos + Flash Cards</strong></li>
+          </ul>
+          <a href="LINK_CHECKOUT_PRO" class="plan-cta pro-cta">
+            🌿 Quero o PRO — R$ 24,90 👇
+          </a>
+        </div>
+
       </div>
-
-      <div class="price-block">
-        <div class="from">De R$ 29,90</div>
-        <div class="to"><span>R$</span> 12,90</div>
-        <div class="today-only">🔥 Só Hoje</div>
-      </div>
-
-      <a href="https://pay.lowify.com.br/checkout?product_id=0pK4aE" class="cta-offer">
-        🎨 Quero Meu Kit Agora! 👇
-      </a>
-      <p class="offer-secure">🔒 Compra 100% Segura · Acesso Imediato após pagamento</p>
+      <p style="text-align:center;font-size:0.78rem;color:var(--brown-mid);margin-top:14px;">
+        🔒 Compra 100% Segura · Acesso Imediato · 7 dias de Garantia Total
+      </p>
     </div>
 
     <!-- ══════ GARANTIA ══════ -->
@@ -1017,12 +1216,14 @@
         Plante a semente do Axé hoje — de um jeito fofo, divertido e cheio de amor.
       </p>
       <div class="price-hero" style="margin-bottom:20px;">
-        <span class="old">De R$ 29,90</span>
-        <span class="new">R$ 12,90</span>
-        <span class="today">Só Hoje</span>
+        <span class="old">Básico</span>
+        <span class="new">R$ 14,90</span>
+        &nbsp;
+        <span class="old">PRO</span>
+        <span class="new" style="color:var(--sage-dark)">R$ 24,90</span>
       </div>
-      <a href="https://pay.lowify.com.br/checkout?product_id=0pK4aE" class="cta-main">
-        🎨 Garantir Meu Kit Agora!
+      <a href="#comprar" class="cta-main">
+        🌿 Escolher Meu Plano Agora!
       </a>
       <p class="secure-line" style="margin-top:12px;">🔒 Compra 100% Segura · 7 dias de Garantia · Acesso Imediato</p>
     </div>
