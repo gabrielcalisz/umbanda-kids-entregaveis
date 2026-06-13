@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parabéns Cliente PRO! — Umbanda Kids</title>
+  <meta name="description" content="Sua compra do plano PRO foi confirmada. Acesse seu Copa Umbanda Kids PRO." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #ff7bb6;
+      --pink-2: #ff4fa1;
+      --gold: #ffd166;
+      --gold-2: #f6b73c;
+      --gold-3: #f8d77c;
+      --purple: #9b6dff;
+      --purple-2: #6c3fe0;
+      --green: #6fd49b;
+      --green-2: #4dbf7e;
+      --ink: #1a1230;
+      --white: #fffaf3;
+    }
+
+    html, body {
+      min-height: 100vh;
+      font-family: "Baloo 2", "Fredoka", sans-serif;
+      color: var(--white);
+      background: #1a0e2e;
+      overflow-x: hidden;
+    }
+
+    .bg {
+      position: fixed;
+      inset: -30px;
+      background-image: url("https://umbanda-kids-plataforma.vercel.app/assets/background.png");
+      background-size: cover;
+      background-position: center;
+      background-color: #1a0e2e;
+      filter: blur(7px) brightness(0.7);
+      transform: scale(1.06);
+      z-index: -2;
+    }
+    .bg-overlay {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at top, rgba(255, 209, 102, 0.18), transparent 60%),
+        linear-gradient(180deg, rgba(15, 7, 35, 0.7) 0%, rgba(15, 7, 35, 0.85) 60%, rgba(15, 7, 35, 0.95) 100%);
+      z-index: -1;
+    }
+
+    .pro-frame {
+      position: fixed;
+      inset: 16px;
+      pointer-events: none;
+      border: 2px solid transparent;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--gold), var(--pink), var(--purple)) border-box;
+      -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    .confetti {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .confetti span {
+      position: absolute;
+      top: -20px;
+      width: 10px;
+      height: 14px;
+      opacity: 0.85;
+      border-radius: 2px;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(540deg); }
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 22px 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .logo-mark {
+      font-size: 44px;
+      display: block;
+      filter: drop-shadow(0 0 16px var(--gold));
+      animation: flicker 3.5s ease-in-out infinite;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    @keyframes flicker {
+      0%, 100% { transform: rotate(-4deg) scale(1);    filter: drop-shadow(0 0 10px var(--gold)); }
+      50%      { transform: rotate(4deg)  scale(1.1); filter: drop-shadow(0 0 22px var(--gold-2)); }
+    }
+    .logo-name {
+      font-family: "Fredoka", sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .logo-name em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--pink), var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 800;
+    }
+
+    .pro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      background: linear-gradient(135deg, var(--gold), var(--pink));
+      color: var(--ink);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 8px 24px rgba(255, 209, 102, 0.45);
+      animation: shineBadge 2.4s ease-in-out infinite;
+    }
+    @keyframes shineBadge {
+      0%, 100% { box-shadow: 0 8px 24px rgba(255, 209, 102, 0.45); transform: scale(1); }
+      50%      { box-shadow: 0 12px 36px rgba(255, 100, 180, 0.55); transform: scale(1.03); }
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .hero h1 {
+      font-family: "Fredoka", sans-serif;
+      font-size: clamp(32px, 5vw, 50px);
+      line-height: 1.1;
+      font-weight: 700;
+      margin: 16px 0 14px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--gold), var(--pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 800;
+    }
+    .hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.55;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .vsl-card {
+      background: linear-gradient(180deg, rgba(45, 22, 88, 0.92), rgba(20, 10, 45, 0.96));
+      border: 2px solid rgba(255, 209, 102, 0.55);
+      border-radius: 24px;
+      padding: 22px;
+      margin: 32px 0 36px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 80px rgba(255, 209, 102, 0.18);
+      position: relative;
+    }
+    .vsl-eyebrow {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--gold), var(--pink));
+      color: var(--ink);
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .vsl-title {
+      font-family: "Fredoka", sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .vsl-frame {
+      width: min(420px, 100%);
+      margin: 0 auto;
+      aspect-ratio: 3 / 4;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #000;
+      position: relative;
+      border: 1.5px solid rgba(255, 209, 102, 0.3);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.55), 0 0 60px rgba(255, 209, 102, 0.18);
+    }
+    .vsl-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 0;
+      display: block;
+      background: #000;
+    }
+    .vsl-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      cursor: pointer;
+      background:
+        radial-gradient(circle at center, rgba(255, 209, 102, 0.2), transparent 65%),
+        linear-gradient(180deg, rgba(20, 10, 40, 0.25) 0%, rgba(20, 10, 40, 0.55) 100%);
+      transition: opacity 0.35s ease;
+      z-index: 2;
+    }
+    .vsl-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .vsl-play-btn {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--pink));
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      font-size: 38px;
+      box-shadow: 0 14px 40px rgba(255, 209, 102, 0.55), 0 0 0 8px rgba(255, 255, 255, 0.08);
+      border: 3px solid rgba(255, 255, 255, 0.85);
+      animation: bouncePlay 2.2s ease-in-out infinite;
+      padding-left: 6px;
+    }
+    @keyframes bouncePlay {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.07); }
+    }
+    .vsl-overlay-label {
+      font-family: "Fredoka", sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.7);
+      letter-spacing: 0.5px;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .vsl-overlay-sub {
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.75);
+      font-weight: 600;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    }
+
+    .vsl-unmute {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(20, 10, 40, 0.85);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      border: 1.5px solid rgba(255, 209, 102, 0.6);
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      z-index: 3;
+      animation: blinkUnmute 1.6s ease-in-out infinite;
+    }
+    .vsl-unmute.show { display: inline-flex; }
+    @keyframes blinkUnmute {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 209, 102, 0.5); }
+      50%      { box-shadow: 0 0 0 10px rgba(255, 209, 102, 0); }
+    }
+
+    .pitch-box {
+      margin: 0 0 8px;
+      padding: 28px 28px 26px;
+      background: linear-gradient(180deg, rgba(45, 22, 88, 0.92), rgba(20, 10, 45, 0.96));
+      border: 1.5px solid rgba(255, 209, 102, 0.4);
+      border-radius: 22px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+    .pitch-box::before {
+      content: "💭";
+      position: absolute;
+      top: -14px;
+      left: 24px;
+      background: var(--ink);
+      padding: 4px 10px;
+      font-size: 20px;
+      border-radius: 10px;
+      border: 1.5px solid rgba(255, 209, 102, 0.4);
+    }
+    .pitch-headline {
+      font-family: "Fredoka", sans-serif;
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+    .pitch-headline em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--pink), var(--gold));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 800;
+    }
+    .pitch-text {
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.88);
+      margin-bottom: 12px;
+    }
+    .pitch-text strong { color: #fff; font-weight: 700; }
+
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .btn-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 22px 26px;
+      border-radius: 22px;
+      text-decoration: none;
+      font-family: inherit;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      text-align: center;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      min-height: 100px;
+    }
+
+    .btn-cta-primary {
+      background: linear-gradient(135deg, var(--gold), var(--pink));
+      color: var(--ink);
+      box-shadow: 0 12px 36px rgba(255, 209, 102, 0.45);
+      animation: pulseBtn 2.2s ease-in-out infinite;
+    }
+    .btn-cta-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 16px 44px rgba(255, 209, 102, 0.6);
+    }
+    @keyframes pulseBtn {
+      0%, 100% { box-shadow: 0 12px 36px rgba(255, 209, 102, 0.45); }
+      50%      { box-shadow: 0 16px 48px rgba(255, 100, 180, 0.55); }
+    }
+
+    .btn-cta-secondary {
+      background: linear-gradient(135deg, rgba(155, 109, 255, 0.85), rgba(108, 63, 224, 0.95));
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 12px 36px rgba(155, 109, 255, 0.4);
+    }
+    .btn-cta-secondary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 16px 44px rgba(155, 109, 255, 0.55);
+    }
+
+    .btn-cta-title {
+      font-family: "Fredoka", sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-cta-sub {
+      font-size: 13px;
+      opacity: 0.85;
+      font-weight: 600;
+    }
+
+    .bonus-list {
+      margin-top: 24px;
+      padding: 22px 24px;
+      background: rgba(20, 12, 45, 0.7);
+      border: 1.5px solid rgba(255, 209, 102, 0.35);
+      border-radius: 18px;
+    }
+    .bonus-list h3 {
+      font-family: "Fredoka", sans-serif;
+      font-size: 16px;
+      color: var(--gold);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .bonus-list ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 8px;
+    }
+    .bonus-list li {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.85);
+      padding: 6px 0;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .bonus-list li::before {
+      content: "🌟";
+      flex-shrink: 0;
+    }
+
+    .info-box {
+      margin-top: 24px;
+      padding: 22px 24px;
+      background: rgba(20, 12, 45, 0.7);
+      border: 1.5px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      text-align: center;
+      font-size: 14.5px;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.6;
+    }
+    .info-box strong { color: var(--gold); }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.4);
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .pro-frame { inset: 8px; }
+      .wrap { padding: 30px 16px 50px; }
+      .hero h1 { font-size: 28px; }
+      .vsl-card { padding: 16px; }
+      .vsl-title { font-size: 18px; }
+      .actions { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
+  <div class="pro-frame" aria-hidden="true"></div>
+
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+  <div class="wrap">
+
+    <div class="logo">
+      <span class="logo-mark">🪔</span>
+      <span class="logo-name">Umbanda <em>Kids</em></span>
+    </div>
+
+    <section class="hero">
+      <span class="pro-badge">⭐ Cliente PRO</span>
+      <h1>Saravá, <em>Filho do Axé!</em> 🎉</h1>
+      <p>
+        Sua compra do <strong>Copa Umbanda Kids — Plano PRO</strong> foi confirmada!
+        Você desbloqueou todos os bônus exclusivos. Antes de acessar, <strong>assista esse vídeo importante</strong> 👇
+      </p>
+    </section>
+
+    <!-- VSL -->
+    <div class="vsl-card">
+      <div class="vsl-title">
+        <span class="vsl-eyebrow">⚡ OPORTUNIDADE ÚNICA PRO</span><br/>
+        Você recebeu uma <em style="color:var(--gold);font-style:normal;">condição especial</em>!
+      </div>
+      <div class="vsl-frame">
+        <video id="vsl-video"
+               src="https://umbanda-kids-plataforma.vercel.app/vsl/vsl-web.mp4"
+               playsinline
+               preload="metadata"
+               poster=""></video>
+
+        <div class="vsl-overlay" id="vsl-overlay">
+          <div class="vsl-play-btn" aria-label="Reproduzir vídeo">▶</div>
+          <span class="vsl-overlay-label">Toque para assistir</span>
+          <span class="vsl-overlay-sub">🔊 com áudio</span>
+        </div>
+
+        <button type="button" class="vsl-unmute" id="vsl-unmute" aria-label="Ativar áudio">
+          🔇 Clique para ativar o áudio
+        </button>
+      </div>
+    </div>
+
+    <!-- Pitch -->
+    <div class="pitch-box">
+      <h2 class="pitch-headline">
+        Vamos ser sinceros: <em>excluir 100% o celular do seu filho hoje é praticamente impossível.</em>
+      </h2>
+      <p class="pitch-text">
+        Seja pra <strong>fazer a comida</strong>, <strong>limpar a casa</strong>, ou simplesmente
+        pra ele <strong>ficar quieto um pouco</strong>… o celular acaba sendo o "ajudante" dos pais.
+      </p>
+      <p class="pitch-text">
+        Mas e se esse tempo de tela virasse tempo de <strong style="color:var(--gold);">aprender Umbanda</strong>?
+      </p>
+      <p class="pitch-text" style="margin-bottom:0;">
+        💡 Apresentamos a <strong>Umbanda Kids</strong>: a primeira plataforma de
+        <strong>desenhos animados de Umbanda</strong> — todos pensados para o aprendizado infantil.
+        Enquanto seu pequeno se diverte, ele aprende sobre os Orixás, Caboclos e a tradição.
+      </p>
+    </div>
+
+    <!-- Botões CTA -->
+    <div class="actions">
+
+      <a class="btn-cta btn-cta-primary"
+         href="https://umbanda-kids-plataforma.vercel.app"
+         target="_blank" rel="noopener">
+        <span class="btn-cta-title">✨ QUERO ACESSAR A PLATAFORMA</span>
+        <span class="btn-cta-sub">Aproveitar a condição especial agora</span>
+      </a>
+
+      <a class="btn-cta btn-cta-secondary"
+         href="https://umbanda-kids-entregaveis.vercel.app/copa-pro"
+         target="_blank" rel="noopener">
+        <span class="btn-cta-title">⚽ ACESSAR MEU COPA UMBANDA KIDS</span>
+        <span class="btn-cta-sub">+ todos os bônus PRO exclusivos</span>
+      </a>
+
+    </div>
+
+    <div class="bonus-list">
+      <h3>⭐ Você desbloqueou todos os bônus PRO:</h3>
+      <ul>
+        <li>Máscaras dos Orixás para Recortar</li>
+        <li>Calendário Sagrado 2026</li>
+        <li>Flash Cards dos Orixás</li>
+        <li>Certificado "Filho do Axé"</li>
+        <li>Cartilha de Pontos Cantados</li>
+      </ul>
+    </div>
+
+    <div class="info-box">
+      💡 <strong>Salve este link nos favoritos!</strong> Você pode voltar aqui sempre que quiser
+      acessar seu produto ou a plataforma. Qualquer dúvida, fale com a gente no Instagram
+      <strong>@umbandaparatodosoficial</strong>.
+    </div>
+
+    <p class="footer">© Umbanda Kids · Cliente PRO · Saravá! 🪔</p>
+
+  </div>
+
+  <script>
+    (function () {
+      const video   = document.getElementById("vsl-video");
+      const overlay = document.getElementById("vsl-overlay");
+      const unmute  = document.getElementById("vsl-unmute");
+      if (!video) return;
+
+      function startPlayback() {
+        overlay.classList.add("hidden");
+        video.muted = false;
+        video.volume = 1;
+        video.controls = true;
+        const p = video.play();
+        if (p && p.catch) {
+          p.catch(() => {
+            video.muted = true;
+            video.play().catch(() => {});
+            unmute.classList.add("show");
+          });
+        }
+      }
+
+      function enableSound() {
+        video.muted = false;
+        video.volume = 1;
+        unmute.classList.remove("show");
+        if (video.paused) video.play().catch(() => {});
+      }
+
+      overlay.addEventListener("click", startPlayback);
+      unmute.addEventListener("click", enableSound);
+
+      video.addEventListener("click", () => {
+        if (overlay.classList.contains("hidden")) {
+          if (video.paused) video.play(); else video.pause();
+        }
+      });
+
+      video.addEventListener("ended", () => {
+        overlay.classList.remove("hidden");
+        unmute.classList.remove("show");
+      });
+    })();
+
+    (function () {
+      const wrap = document.getElementById("confetti");
+      const colors = ["#ffd166", "#ff7bb6", "#9b6dff", "#6ec1ff", "#6fd49b", "#f8d77c"];
+      for (let i = 0; i < 36; i++) {
+        const s = document.createElement("span");
+        s.style.left = Math.random() * 100 + "%";
+        s.style.background = colors[i % colors.length];
+        s.style.animationDuration = (3 + Math.random() * 3) + "s";
+        s.style.animationDelay = (Math.random() * 4) + "s";
+        s.style.transform = "rotate(" + Math.random() * 360 + "deg)";
+        wrap.appendChild(s);
+      }
+    })();
+  </script>
+</body>
+</html>
